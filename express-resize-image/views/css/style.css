@@ -1,0 +1,334 @@
+/* IMPORT FONT */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
+
+/* VARIABLES */
+:root {
+  /* FONT */
+  --font-family: "Open Sans", sans-serif;
+
+  /* COLORS */
+  --color-info: #4d90fe;
+  --color-bg: #f3f0ec;
+  --color-white: #fff;
+  --color-font: #383e45;
+  --color-hover: #161616;
+
+  /* BOX-SHADOW */
+  --box-shadow: 0 3px 6px 0 rgb(0 0 0 / 14%);
+
+  /* MAIN-WIDTH */
+  --main-width: 1248px; /* 1200px + 48px */
+}
+
+/* BASE */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: var(--font-family);
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  /* overflow: hidden; */
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button {
+  font-family: inherit;
+  border: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* HELPERS COMPONENTS */
+.button {
+  display: inline-block;
+
+  padding: 20px 50px;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: var(--color-white);
+  background: var(--color-info);
+  box-shadow: var(--box-shadow);
+  border-radius: 8px;
+  margin: 10px;
+
+  transition: all 0.1s linear;
+  cursor: pointer;
+}
+
+.dark {
+  background-color: var(--color-hover);
+}
+
+.dark:hover {
+  background-color: var(--color-info);
+}
+
+.button:hvoer {
+  background-color: var(--color-hover);
+}
+
+/* HEADER COMPONENT */
+.header {
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow);
+}
+
+.header .content {
+  display: flex;
+  justify-content: center;
+  padding: 10px 24px;
+  max-width: var(--main-width);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header .content .logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-font);
+}
+
+.header .content img {
+  width: 90px;
+}
+
+/* MAIN COMPONENT */
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-bg);
+}
+
+.main-container,
+.sidebar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: var(--main-width);
+  padding: 50px 24px;
+  margin: 0 auto;
+}
+
+.main-container h2 {
+  font-size: 42px;
+  letter-spacing: 0;
+  font-weight: 600;
+  color: var(--color-font);
+  margin-bottom: 8px;
+  line-height: 46px;
+  text-align: center;
+}
+
+.main-container p {
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--color-font);
+  letter-spacing: 0;
+  margin-bottom: 8px;
+  line-height: 32px;
+}
+
+.main-container p span {
+  color: var(--color-info);
+  font-weight: bold;
+}
+
+.sidebar {
+  background-color: var(--color-white);
+}
+
+.info {
+  display: inline-block;
+  padding: 24px;
+  font-size: 14px;
+  color: #383e45;
+  background-color: #d9edf7;
+  border-radius: 4px;
+  margin-bottom: 50px;
+}
+
+#image-reference {
+  background-color: var(--color-white);
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+}
+
+.sketch {
+  position: relative;
+  height: 400px;
+  min-width: 400px;
+  margin: 0;
+  overflow: visible;
+  order: 2;
+}
+
+.bee-sketch {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.red {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-1.png) no-repeat center center;
+  opacity: 1;
+  animation: red 3s linear infinite, opacityRed 5s linear alternate infinite;
+}
+
+.blue {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-1.png) no-repeat center center;
+  opacity: 0;
+  animation: blue 3s linear infinite, opacityBlue 5s linear alternate infinite;
+}
+
+@keyframes blue {
+  0% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-1.png);
+  }
+  9.09% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-2.png);
+  }
+  27.27% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-3.png);
+  }
+  36.36% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-4.png);
+  }
+  45.45% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-5.png);
+  }
+  54.54% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-6.png);
+  }
+  63.63% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-7.png);
+  }
+  72.72% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-8.png);
+  }
+  81.81% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-9.png);
+  }
+  100% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-1.png);
+  }
+}
+
+@keyframes red {
+  0% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-1.png);
+  }
+  9.09% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-2.png);
+  }
+  27.27% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-3.png);
+  }
+  36.36% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-4.png);
+  }
+  45.45% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-5.png);
+  }
+  54.54% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-6.png);
+  }
+  63.63% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-7.png);
+  }
+  72.72% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-8.png);
+  }
+  81.81% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-9.png);
+  }
+  100% {
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-1.png);
+  }
+}
+
+@keyframes opacityBlue {
+  from {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opacityRed {
+  from {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    display: grid;
+    grid-template-columns: 100% !important;
+  }
+  .button {
+    display: block;
+    width: 100%;
+    margin: 5px auto;
+    font-size: 16px;
+  }
+
+  .header .content .logo {
+    font-size: 18px;
+  }
+
+  .main-container h2 {
+    font-size: 34px;
+    line-height: 42px;
+  }
+
+  .main-container p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sketch {
+    padding: 10px;
+    min-width: 300px;
+  }
+}

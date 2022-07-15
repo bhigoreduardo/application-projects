@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Custom CSS File Link -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>ImgResize</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="content">
+        <a title="ImgResize" href="" class="logo"> <img src="./assets/img/logo.png" alt="ImgResize Logo" /> ImgResize</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="main-container">
+        <h2>Redimensionar IMAGEM</h2>
+        <p>Redimensione <span>JPG</span>, <span>PNG</span>, <span>SVG</span> ou <span>GIF</span> definindo nova altura e largura em pixels.</p>
+
+        <form method="POST" enctype="multipart/form-data" action="/upload">
+          <label class="button" for="inputFile">Selecionar imagem</label>
+          <input style="display: none" type="file" name="inputFile" id="inputFile" onclick="sendUpload()" />
+          <button class="button dark" type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

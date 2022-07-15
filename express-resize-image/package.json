@@ -1,0 +1,31 @@
+{
+  "name": "express-resize-image",
+  "version": "1.0.0",
+  "description": "Aplicação Node.JS +  Express + Projeto Front + Resize image and Compressed image",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhigoreduardo/express-resize-image.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhigoreduardo/express-resize-image/issues"
+  },
+  "homepage": "https://github.com/bhigoreduardo/express-resize-image#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "compress-image": "^0.0.1",
+    "compress-images": "^2.0.5",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "gifsicle": "^5.2.1",
+    "multer": "^1.4.5-lts.1",
+    "pngquant-bin": "^6.0.1",
+    "sharp": "^0.30.7"
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Custom CSS File Link -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>ImgResize</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="content">
+        <a title="ImgResize" href="/" class="logo"> <img src="./assets/img/logo.png" alt="ImgResize Logo" /> ImgResize</a>
+      </div>
+    </header>
+
+    <main class="main" style="display: grid; grid-template-columns: 2fr 1fr">
+      <section class="main-container">
+        <h2>Redimensionar IMAGEM</h2>
+        <p>Redimensione <span>JPG</span>, <span>PNG</span>, <span>SVG</span> ou <span>GIF</span> definindo nova altura e largura em pixels.</p>
+        <div id="image-reference">
+          <div class="sketch">
+            <div class="bee-sketch red"></div>
+            <div class="bee-sketch blue"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sidebar">
+        <span class="info">Todas as imagens serão compactadas com a melhor relação qualidade e tamanho do ficheiro.</span>
+
+        <form action="/">
+          <input class="info" style="width: 100%" type="text" placeholder="Definir largura da imagem" id="widthFile" />
+          <button class="button" style="width: 100%" onclick="resizeImage()">Redimensionar IMAGEM</button>
+        </form>
+      </section>
+    </main>
+
+    <script>
+      function resizeImage() {
+        const URL = "http://192.168.0.124:5000";
+
+        let widthFile = document.getElementById("widthFile").value;
+
+        const options = {
+          method: "POST",
+          headers: new Headers({ "Content-Type": "application/json" }),
+          body: JSON.stringify({ widthFile }),
+        };
+
+        fetch(`${URL}/api`, options);
+      }
+    </script>
+  </body>
+</html>
